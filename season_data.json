@@ -1,0 +1,84 @@
+{
+  "drivers": [
+    {"name": "Lando Norris", "team": "McLaren", "experience": 85, "racecraft": 95, "awareness": 83, "pace": 95},
+    {"name": "Oscar Piastri", "team": "McLaren", "experience": 80, "racecraft": 94, "awareness": 88, "pace": 95},
+
+    {"name": "George Russell", "team": "Mercedes", "experience": 86, "racecraft": 92, "awareness": 88, "pace": 95},
+    {"name": "Kimi Antonelli", "team": "Mercedes", "experience": 76, "racecraft": 84, "awareness": 72, "pace": 92},
+
+    {"name": "Max Verstappen", "team": "Red Bull Racing", "experience": 91, "racecraft": 94, "awareness": 84, "pace": 90},
+    {"name": "Isack Hadjar", "team": "Red Bull Racing", "experience": 76, "racecraft": 84, "awareness": 80, "pace": 86},
+
+    {"name": "Lewis Hamilton", "team": "Ferrari", "experience": 99, "racecraft": 90, "awareness": 88, "pace": 92},
+    {"name": "Charles Leclerc", "team": "Ferrari", "experience": 85, "racecraft": 91, "awareness": 89, "pace": 93},
+
+    {"name": "Fernando Alonso", "team": "Aston Martin", "experience": 100, "racecraft": 86, "awareness": 84, "pace": 72},
+    {"name": "Lance Stroll", "team": "Aston Martin", "experience": 86, "racecraft": 77, "awareness": 74, "pace": 68},
+
+    {"name": "Alexander Albon", "team": "Williams", "experience": 85, "racecraft": 87, "awareness": 78, "pace": 82},
+    {"name": "Carlos Sainz Jr", "team": "Williams", "experience": 90, "racecraft": 85, "awareness": 77, "pace": 82},
+
+    {"name": "Liam Lawson", "team": "Racing Bulls", "experience": 77, "racecraft": 81, "awareness": 74, "pace": 82},
+    {"name": "Arvid Linblad", "team": "Racing Bulls", "experience": 66, "racecraft": 73, "awareness": 72, "pace": 83},
+
+    {"name": "Nico Hülkenberg", "team": "Audi", "experience": 89, "racecraft": 84, "awareness": 88, "pace": 80},
+    {"name": "Gabriel Bortoleto", "team": "Audi", "experience": 74, "racecraft": 77, "awareness": 78, "pace": 80},
+
+    {"name": "Esteban Ocon", "team": "Haas", "experience": 85, "racecraft": 79, "awareness": 84, "pace": 84},
+    {"name": "Oliver Bearman", "team": "Haas", "experience": 77, "racecraft": 82, "awareness": 69, "pace": 86},
+
+    {"name": "Sergio Perez", "team": "Cadillac", "experience": 92, "racecraft": 86, "awareness": 77, "pace": 78},
+    {"name": "Valterri Bottas", "team": "Cadillac", "experience": 89, "racecraft": 81, "awareness": 96, "pace": 78},
+
+    {"name": "Pierre Gasly", "team": "Alpine", "experience": 85, "racecraft": 82, "awareness": 79, "pace": 82},
+    {"name": "Franco Colapinto", "team": "Alpine", "experience": 74, "racecraft": 70, "awareness": 71, "pace": 80}
+  ],
+
+  "teams": {
+    "Mercedes": 96,
+    "Ferrari": 92,
+    "McLaren": 87,
+    "Haas": 86,
+    "Red Bull Racing": 84,
+    "Racing Bulls": 82,
+    "Alpine": 84,
+    "Audi": 78,
+    "Williams": 76,
+    "Cadillac": 72,
+    "Aston Martin": 60
+  },
+
+
+  "tracks": [
+    { "name": "Australian GP", "laps": 58, "track_pace_factor": 3.5},
+    { "name": "Chinese GP", "laps": 56, "track_pace_factor": 3.8},
+    { "name": "Japanese GP", "laps": 53, "track_pace_factor": 4.0},
+    { "name": "Bahrain GP", "laps": 57, "track_pace_factor": 3.2},
+    { "name": "Saudi Arabian GP", "laps": 50, "track_pace_factor": 4.2},
+    { "name": "Miami GP", "laps": 57, "track_pace_factor": 3.6},
+    { "name": "Canadian GP", "laps": 70, "track_pace_factor": 3.3},
+    { "name": "Monaco GP", "laps": 78, "track_pace_factor": 2.5},
+    { "name": "Spanish GP (Barcelona)", "laps": 66, "track_pace_factor": 3.7},
+    { "name": "Austrian GP", "laps": 71, "track_pace_factor": 3.9},
+    { "name": "British GP", "laps": 52, "track_pace_factor": 4.1},
+    { "name": "Belgian GP", "laps": 44, "track_pace_factor": 4.3},
+    { "name": "Hungarian GP", "laps": 70, "track_pace_factor": 3.0},
+    { "name": "Dutch GP", "laps": 72, "track_pace_factor": 3.4},
+    { "name": "Italian GP", "laps": 53, "track_pace_factor": 4.5},
+    { "name": "Spanish GP (Madrid)", "laps": 58, "track_pace_factor": 3.6},
+    { "name": "Azerbaijan GP", "laps": 51, "track_pace_factor": 3.7},
+    { "name": "Singapore GP", "laps": 61, "track_pace_factor": 2.8},
+    { "name": "USA GP", "laps": 56, "track_pace_factor": 4.0},
+    { "name": "Mexico City GP", "laps": 71, "track_pace_factor": 3.4},
+    { "name": "Brazil GP", "laps": 71, "track_pace_factor": 3.2},
+    { "name": "Las Vegas GP", "laps": 50, "track_pace_factor": 4.4},
+    { "name": "Qatar GP", "laps": 57, "track_pace_factor": 3.9},
+    { "name": "Abu Dhabi GP", "laps": 58, "track_pace_factor": 3.8}
+  ],
+
+  "settings": {
+    "runs": 1,
+    "randomness": 0.5,
+    "dnf_base_rate": 0.01
+  }
+}
