@@ -3,10 +3,8 @@
 
 -----
 
-Hello to the person marking my work 👋 
 Please find the description and instructions to run my project below. 
 
-*Please Note:* Alot of work and testing for the main code of this project was done outside of this repo and then added into the project file. 
 
 ## 📝 | Project Description
 
