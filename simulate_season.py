@@ -1,6 +1,5 @@
 import json
 import random
-import sys
 from typing import Dict, List
 
 POINTS_TABLE = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
@@ -12,21 +11,19 @@ def load_season_data(filepath: str):
 def calculate_driver_score(driver: Dict, team_perf: int, track: Dict, randomness: float):
 
     driver_base = (
-        driver["experience"] * 0.15 +
-        driver["racecraft"]  * 0.25 +
-        driver["awareness"]  * 0.10 +
-        driver["pace"]       * 0.50
+            driver["experience"] * 0.15 +
+            driver["racecraft"]  * 0.25 +
+            driver["awareness"]  * 0.10 +
+            driver["pace"]       * 0.50
     )
 
     team_factor = team_perf * 0.5
-
     track_factor = track["track_pace_factor"] * 5
-
     random_factor = random.uniform(-1, 1) * (randomness * 15)
 
     return driver_base + team_factor + track_factor + random_factor
 
-def simulate_race(drivers: List[Dict], teams: Dict[str, int], track: Dict, randomness: float, dnf_rate : float):
+def simulate_race(drivers: List[Dict], teams: Dict[str, int], track: Dict, randomness: float, dnf_rate: float):
     results = []
 
     for d in drivers:
@@ -38,7 +35,12 @@ def simulate_race(drivers: List[Dict], teams: Dict[str, int], track: Dict, rando
         else:
             score = calculate_driver_score(d, teams[d["team"]], track, randomness)
 
-        results.append({"name": d["name"], "team": d["team"], "score": score, "dnf": dnf})
+        results.append({
+            "name": d["name"],
+            "team": d["team"],
+            "score": score,
+            "dnf": dnf
+        })
 
     results.sort(key=lambda x: x["score"], reverse=True)
     return results
@@ -53,7 +55,6 @@ def apply_constructor_points(constructors: Dict, results: List[Dict]):
         if i < len(POINTS_TABLE) and not result["dnf"]:
             constructors[result["team"]] += POINTS_TABLE[i]
 
-
 def print_table(title: str, data: Dict):
     print("\n" + title)
     print("-" * len(title))
@@ -64,13 +65,14 @@ def print_table(title: str, data: Dict):
     for x, (name, pts) in enumerate(sorted_items, 1):
         print(f"{x:<10} {name:<25} {pts:<10}")
 
-
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: ' python simulate_season.py season_data.json '")
-        sys.exit(1)
+    filepath = "season_data.json"  # Make sure this file is in the same folder
 
-    data = load_season_data(sys.argv[1])
+    try:
+        data = load_season_data(filepath)
+    except FileNotFoundError:
+        print(f"Could not find '{filepath}'. Make sure it's in the same folder as this script.")
+        return
 
     drivers = data["drivers"]
     teams = data["teams"]
@@ -82,7 +84,9 @@ def main():
 
     for track in tracks:
         results = simulate_race(
-            drivers, teams, track,
+            drivers,
+            teams,
+            track,
             randomness=settings["randomness"],
             dnf_rate=settings["dnf_base_rate"]
         )
